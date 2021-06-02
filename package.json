@@ -1,12 +1,11 @@
 {
   "name": "react-immo-statistic",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "private": false,
-  "main": "dist/ImageCard.js",
-  "module": "dist/ImageCard.js",
+  "main": "lib/index.js",
+  "module": "lib/index.ts",
   "files": [
-    "dist",
-    "README.md"
+    "lib/**/*"
   ],
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
@@ -19,10 +18,11 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
-    "publish:npm": "babel ./src/components -d dist --copy-files",
+    "build": "tsc",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json"
   },
   "eslintConfig": {
     "extends": [
@@ -44,11 +44,27 @@
   },
   "devDependencies": {
     "@babel/cli": "^7.14.3",
-    "@babel/preset-react": "^7.13.13"
+    "@babel/preset-react": "^7.13.13",
+    "@types/react": "^17.0.9",
+    "prettier": "^2.3.0",
+    "tslint": "^6.1.3",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^4.3.2"
   },
   "babel": {
     "presets": [
       "@babel/preset-react"
     ]
-  }
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gorbachew/react-immo-statistic.git"
+  },
+  "author": "Gorbachew",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gorbachew/react-immo-statistic/issues"
+  },
+  "homepage": "https://github.com/Gorbachew/react-immo-statistic#readme"
 }
